@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">⚓</div>
+    <div class="title">PortHub</div>
+    <div class="banner"></div>
+  </header>
+
+  <main id="content">
+    <div id="nfts" class="tab active"></div>
+    <div id="catalog" class="tab"></div>
+    <div id="gifts" class="tab"></div>
+  </main>
+
+  <div class="bottom-bar">
+    <button data-tab="nfts">NFT’s</button>
+    <button data-tab="catalog">Catalog</button>
+    <button data-tab="gifts">My Gifts</button>
+    <div class="balance">Balance: <span id="balance">0.00 TON+</span></div>
+  </div>
+
+  <button id="add-lot">+</button>
+
+  <div id="create-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Создать лот</h3>
+      <label>Тип товара:</label>
+      <select id="item-type">
+        <option value="nft">NFT’s</option>
+        <option value="custom">Свой вариант</option>
+      </select>
+      <input type="text" id="title" placeholder="Название товара" />
+      <input type="url" id="image" placeholder="Ссылка на изображение" />
+      <input type="number" id="price" placeholder="Цена (TON)" step="0.01" />
+      <button id="create-btn">Создать</button>
+      <button id="cancel-btn" class="cancel">Отмена</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
