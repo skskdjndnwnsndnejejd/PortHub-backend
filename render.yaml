@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: porthub
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: LOG_CHANNEL_ID
+        sync: false
+      - key: OWNER_TG_ID
+        sync: false
