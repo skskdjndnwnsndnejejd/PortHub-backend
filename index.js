@@ -305,3 +305,4 @@ app.post("/purchase", async (req, res) => {
     // 6) send log to telegram channel
     const buyerUser = await supabase.from("users").select("*").eq("tg_id", buyer_id).limit(1);
     const buyerUsername = (buyerUser.data && buyerUser.data[0] && buyerUser.data[0].username) || req.body
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
