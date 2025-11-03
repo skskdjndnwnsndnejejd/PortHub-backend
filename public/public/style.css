@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fff8e1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ffcc33, #ff9933);
+  padding: 10px;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  flex: 0 0 auto;
+}
+
+.banner {
+  flex: 1;
+  height: 40px;
+  background: url('https://i.imgur.com/eo0msY5.jpeg') right/cover no-repeat;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.tab {
+  display: none;
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.tab.active {
+  display: block;
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+  background: #ffeaa7;
+  border-top: 1px solid #ffcc33;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-bar button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.balance {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+#add-lot {
+  position: fixed;
+  right: 16px;
+  bottom: 70px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #ffbb33;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.modal-content input, .modal-content select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc33;
+  font-weight: bold;
+}
+
+.modal-content button.cancel {
+  background: #ccc;
+  }
